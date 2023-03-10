@@ -2,7 +2,6 @@
 from pathlib import Path
 
 # We set up matplotlib, pandas, and the display function
-%matplotlib inline
 import matplotlib.pyplot as plt
 from IPython.display import display
 import pandas as pd
@@ -22,7 +21,7 @@ plt.imshow(test_data)
 
 ## 2. Using PIL to open images
 # open the image
-img = Image.open('datasets/bee_1.jpg')
+img = Image.open('data/bee_1.jpg')
 
 # Get the image size
 img_size = img.size
@@ -94,7 +93,7 @@ plot_rgb(img_data)
 
 ## 6. Honey bees v bumble bees: Round 1
 # load bee_12.jpg as honey
-honey = Image.open('datasets/bee_12.jpg')
+honey = Image.open('data/bee_12.jpg')
 
 # display the honey bee image
 display(honey)
@@ -107,7 +106,7 @@ plot_rgb(honey_data)
 
 ## 7. Honey bees v Bumble bees: Round 2
 # load bee_3.jpg as bumble
-bumble = Image.open('datasets/bee_3.jpg')
+bumble = Image.open('data/bee_3.jpg')
 
 # display the bumble bee image
 display(bumble)
@@ -160,7 +159,7 @@ honey_bw_hc = Image.fromarray(honey_hc_arr)
 honey_bw_hc.save("saved_images/bw_hc.jpg")
 
 ## 10. Constructing a pipeline
-image_paths = ['datasets/bee_1.jpg', 'datasets/bee_12.jpg', 'datasets/bee_2.jpg', 'datasets/bee_3.jpg']
+image_paths = ['data/bee_1.jpg', 'data/bee_12.jpg', 'data/bee_2.jpg', 'data/bee_3.jpg']
 
 def process_image(path):
     img = Image.open(path)
